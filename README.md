@@ -35,13 +35,30 @@ npm install
 
 This will install the required dependencies based on the package.json file.
 
+### Fix your `cypress.env.json` file
+As .env variables are not commited to the remote repository, you will need to add them yourself.
+
+- Create a new file named `cypress.env.json`
+- Copy and paste the content from the example file
+```
+{
+    "STANDARD_USER": "",
+    "LOCKED_OUT_USER": "",
+    "PROBLEM_USER": "",
+    "PERFORMANCE_GLITCH_USER": "",
+    "GLOBAL_PASSWORD": ""
+}
+```
+- Add the values for each variable. They can be found at [https://www.saucedemo.com]
+
+
 ## How to Run the Tests
 You can run the tests using the following commands:
 
 #### Run tests using production URL [https://www.saucedemo.com]:
 
 ```
-npm run test-pro
+npm run test:pro
 ```
 
 #### Run tests using a specific environment:
