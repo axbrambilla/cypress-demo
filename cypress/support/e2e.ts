@@ -1,14 +1,15 @@
-import { login, loginSession } from "../commands/login";
+import { login } from "../commands/login/login";
 import { addToCart } from "../commands/inventory/addToCart";
-import { getCartItemCount } from "../commands/cart/getCartItemCount";
-import { isProductAdded } from "../commands/inventory/isProductAdded";
 import { removeProduct } from "../commands/inventory/removeProduct";
+import { getCartItemCount } from "../commands/cart/getCartItemCount";
+import { isErrorDisplayed } from "../commands/login/isErrorDisplayed";
+import { isProductAdded } from "../commands/inventory/isProductAdded";
 
 Cypress.Commands.addAll({
   login,
   addToCart,
-  loginSession,
   removeProduct,
   isProductAdded,
+  isErrorDisplayed,
   getCartItemCount,
 });

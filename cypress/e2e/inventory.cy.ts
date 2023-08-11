@@ -1,9 +1,6 @@
 describe("Inventroy Suite", () => {
   beforeEach(() => {
-    cy.loginSession(
-      Cypress.env("STANDARD_USER"),
-      Cypress.env("GLOBAL_PASSWORD")
-    );
+    cy.login(Cypress.env("STANDARD_USER"), Cypress.env("GLOBAL_PASSWORD"));
     cy.visit("/inventory.html");
   });
 
